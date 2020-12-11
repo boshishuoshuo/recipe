@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { AuthService, AuthResponseData } from './auth.service';
 import { AlertComponent } from '../shared/alert/alert.component';
-import { PlaceHolderDirective } from '../shared/placeholder/placeholder.directive';
+import { PlaceholderDirective } from '../shared/placeholder/placeholder.directive';
 
 @Component({
     selector: 'app-auth',
@@ -14,7 +14,7 @@ export class AuthComponent implements OnDestroy {
     isLoginMode = true;
     isLoading = false;
     error: string = null;
-    @ViewChild(PlaceHolderDirective, {static: false}) alertHost: PlaceHolderDirective;
+    @ViewChild(PlaceholderDirective, {static: false}) alertHost: PlaceholderDirective;
     private closeSub: Subscription;
 
     constructor(private authService: AuthService,
